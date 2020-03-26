@@ -64,3 +64,22 @@ CREATE TABLE auto_prices (
 DROP SEQUENCE hibernate_sequence;
 
 CREATE SEQUENCE hibernate_sequence;
+
+
+Insert into Movies(Title,Runtime,Genre,IMDB_Score,Rating) values
+('Howard the Duck',	'110','Sci-Fi','4.6','PG');
+
+Insert into Movies(Title,Runtime,Genre,IMDB_Score,Rating) values
+('Lavalantula',	'83','Horror','4.7','TV-14');
+
+Insert into Movies(Title,Runtime,Genre,IMDB_Score,Rating) values
+('Starship Troopers','129','Sci-Fi','7.2','PG-13');
+
+Insert into Movies(Title,Runtime,Genre,IMDB_Score,Rating) values
+('Waltz With Bashir','90','Documentary','8.0','R');
+
+Insert into Movies(Title,Runtime,Genre,IMDB_Score,Rating) values
+('Spaceballs','96','Comedy','7.1','PG');
+
+Insert into Movies(Title,Runtime,Genre,IMDB_Score,Rating) values
+('Monsters Inc.','92','Animation','8.1','G');
