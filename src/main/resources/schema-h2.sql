@@ -83,3 +83,39 @@ Insert into Movies(Title,Runtime,Genre,IMDB_Score,Rating) values
 
 Insert into Movies(Title,Runtime,Genre,IMDB_Score,Rating) values
 ('Monsters Inc.','92','Animation','8.1','G');
+
+
+Insert into Home( ADDRESS, HOMENUMBER) values (
+'36 E. Bayberry Rd.Savannah GA 31404','565-6895');
+
+Insert into Home( ADDRESS, HOMENUMBER) values (
+'11 Essex Dr.Farmingdale, NY 11735','454-4544');
+
+Insert into Home( ADDRESS, HOMENUMBER) values (
+'920 Arlington Street Clifton, NJ 07011','985-4515');
+
+Insert into Home( ADDRESS, HOMENUMBER) values (
+'234 High Street, PA 19159','267-3940');
+
+
+
+
+
+
+Insert into Movies(Title,Runtime,Genre,IMDB_Score,Rating) values
+('Howard the Duck',	'110','Sci-Fi','4.6','PG');
+
+Insert into Movies(Title,Runtime,Genre,IMDB_Score,Rating) values
+('Lavalantula',	'83','Horror','4.7','TV-14');
+
+Insert into Movies(Title,Runtime,Genre,IMDB_Score,Rating) values
+('Starship Troopers','129','Sci-Fi','7.2','PG-13');
+
+Insert into Movies(Title,Runtime,Genre,IMDB_Score,Rating) values
+('Waltz With Bashir','90','Documentary','8.0','R');
+
+Insert into Movies(Title,Runtime,Genre,IMDB_Score,Rating) values
+('Spaceballs','96','Comedy','7.1','PG');
+
+Insert into Movies(Title,Runtime,Genre,IMDB_Score,Rating) values
+('Monsters Inc.','92','Animation','8.1','G');
