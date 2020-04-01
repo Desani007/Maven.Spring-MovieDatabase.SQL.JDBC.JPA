@@ -13,8 +13,10 @@ import java.util.Date;
 
 @Controller
 public class PersonController {
+
     @Autowired
-     PersonService personService ;
+     PersonService personService;
+
 
 
 
@@ -32,7 +34,7 @@ public class PersonController {
         person.setLastName(lastName);
         person.setMobileNumber(mobileNumber);
         person.setBirthDate(birthDate);
-        person.setHomeId(homeId);
+
      personService.addPerson(person);
         return "success";
 

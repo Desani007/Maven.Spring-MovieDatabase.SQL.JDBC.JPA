@@ -19,7 +19,7 @@ DROP TABLE IF EXISTS HOME;
 CREATE TABLE HOME (
   ID INT NOT NULL AUTO_INCREMENT,
   ADDRESS VARCHAR2(255) not null default '',
-  HOMENUMBER varchar2(255) NOT NULL DEFAULT '',
+  HOME_NUMBER varchar2(255) NOT NULL DEFAULT '',
   PRIMARY KEY (ID)
 );
 
@@ -85,16 +85,16 @@ Insert into Movies(Title,Runtime,Genre,IMDB_Score,Rating) values
 ('Monsters Inc.','92','Animation','8.1','G');
 
 
-Insert into Home( ADDRESS, HOMENUMBER) values (
+Insert into Home( ADDRESS, HOME_NUMBER) values (
 '36 E. Bayberry Rd.Savannah GA 31404','565-6895');
 
-Insert into Home( ADDRESS, HOMENUMBER) values (
+Insert into Home( ADDRESS, HOME_NUMBER) values (
 '11 Essex Dr.Farmingdale, NY 11735','454-4544');
 
-Insert into Home( ADDRESS, HOMENUMBER) values (
+Insert into Home( ADDRESS, HOME_NUMBER) values (
 '920 Arlington Street Clifton, NJ 07011','985-4515');
 
-Insert into Home( ADDRESS, HOMENUMBER) values (
+Insert into Home( ADDRESS, HOME_NUMBER) values (
 '234 High Street, PA 19159','267-3940');
 
 
