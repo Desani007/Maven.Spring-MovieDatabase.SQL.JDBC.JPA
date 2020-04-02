@@ -7,10 +7,30 @@ public class Person {
 
    private Long id;
     String firstName;
+    @Column(name="LAST_NAME")
     String lastName;
+    @Column(name="MOBILE")
     String mobileNumber;
+    @Column(name="BIRTHDAY")
     Date birthDate;
-    int homeId;
+
+    @ManyToOne(cascade=CascadeType.ALL)
+    Home home;
+
+
+    public Person(Long id, String firstName, String lastName, String mobileNumber, Date birthDate, Home homeId) {
+        this.id = id;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.mobileNumber = mobileNumber;
+        this.birthDate = birthDate;
+        this.home =homeId;
+
+    }
+
+    public Person() {
+
+    }
 
     public Long getId() {
         return id;

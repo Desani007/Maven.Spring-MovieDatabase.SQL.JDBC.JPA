@@ -1,23 +1,27 @@
 package io.zipcoder.persistenceapp.Model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
-import java.io.Serializable;
 import java.util.List;
-import java.util.Set;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 @Entity
-public class Home implements Serializable {
+@Table(name="HOME")
+public class Home {
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)
+    @JsonIgnore
     long id;
+    @Column(name="ADDRESS")
     String address;
+    @Column(name="HOMENUMBER")
     String homeNumber;
+    @Column(name="HOMENUMBER")
 
-    @OneToMany
+    @OneToMany(cascade=CascadeType.ALL)
     List<Person> personList;
-
 
     public Home() {
 
@@ -26,8 +30,8 @@ public class Home implements Serializable {
     public Home(String address, String homeNumber, Person personList) {
         this.address = address;
         this.homeNumber = homeNumber;
-        this.personList= Stream.of(personList).collect(Collectors.toList());
-        this.personList.forEach(x -> x.setHomeId(this));
+       this.personList= Stream.of(personList).collect(Collectors.toList());
+      this.personList.forEach(x -> x.setHome(this));
 
     }
 

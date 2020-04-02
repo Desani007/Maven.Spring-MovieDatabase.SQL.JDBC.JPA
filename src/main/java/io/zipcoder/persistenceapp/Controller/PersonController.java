@@ -22,21 +22,42 @@ public class PersonController {
 
 
     @PostMapping(value = "/people")
-    public String create(@RequestParam ("fname") String firstName,
-                         @RequestParam ("lname")String lastName,
-                         @RequestParam ("number") String mobileNumber,
-                         @DateTimeFormat(pattern = "yyyy-MM-dd") @RequestParam("date") Date birthDate,
-                         @RequestParam ("id") int homeId) {
-
-
-        Person person = new Person();
-        person.setFirstName(firstName);
-        person.setLastName(lastName);
-        person.setMobileNumber(mobileNumber);
-        person.setBirthDate(birthDate);
-
+    public HttpStatus create(@RequestBody  Person person){
      personService.addPerson(person);
-        return "success";
+        return HttpStatus.OK;
+
+
+    }
+
+    @GetMapping(value="/people/{id}", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+    @ResponseBody
+    public Person  findById(@PathVariable("id")  long id){
+         return personService.findbyId(id);
+
+    }
+
+    @PutMapping(value="/people/{id}")
+    public ResponseEntity  update(@PathVariable("id") long id, @RequestBody Person person){
+       personService.updatePerson(id,person);
+       return ResponseEntity.ok(HttpStatus.OK);
+    }
+
+    @DeleteMapping(value="/people/{id}")
+    public ResponseEntity delete(@PathVariable("id") long id){
+        personService.delete(id);
+        return ResponseEntity.ok(HttpStatus.OK);
+    }
+    @GetMapping(value ="/people")
+    @ResponseBody
+    public List<Person> findAll(){
+        List<Person> list =personService.findAll();
+        return  list;
+    }
+
+    @GetMapping(value="/people/reverselookup/{mobileNumber}", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+    @ResponseBody
+    public Person  findByNumber(@PathVariable("mobileNumber")  String mobileNumber){
+        return personService.findByNumber(mobileNumber);
 
 
     }
